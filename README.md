@@ -45,8 +45,26 @@ Este proyecto se clasifica como un sistema distribuido debido a que:
 
 ## Diagramas del Sistema
 
-### 1. Diagrama de Arquitectura General Actualizado
+### 1. Diagrama de Arquitectura General
 
 Este diagrama muestra la interacción entre el cliente, FastAPI, RabbitMQ, el Auto Scaling Manager, los workers, el almacenamiento y la monitorización:
 
-Enlace al diagrama de arquitectura
+![](Diagramas/DiagramaGeneral.svg)
+
+### 2. Diagrama de Secuencia del Proceso 
+Este diagrama ilustra el flujo temporal del procesamiento de una solicitud, desde la autenticación en FastAPI hasta la notificación al cliente, incluyendo la gestión de errores:
+
+![](Diagramas/DiagramaFlujo.svg)
+
+### 3. Diagrama de Despliegue (Deployment)
+El siguiente diagrama muestra cómo se despliegan los componentes en nodos físicos (o Docker Hosts). Se utiliza un nodo para la capa de presentación y mensajería, y otro para el procesamiento intensivo y almacenamiento:
+
+![](Diagramas/Despliegue.svg)
+
+## Interfaces de usuario
+![Figma del proyecto](https://www.figma.com/design/hI5xVxAdqeYuA0gS1xTrT8/Convertix?node-id=0-1&t=9qHcht5Y4tSGJuGq-1)
+
+## Como ejecutar el proyecto
+** Aun no se construye para saber **
+
+## Colaboradores
