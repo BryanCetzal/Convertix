@@ -62,7 +62,7 @@ El siguiente diagrama muestra cómo se despliegan los componentes en nodos físi
 ![](Diagramas/Despliegue.svg)
 
 ## Interfaces de usuario
-![Figma del proyecto](https://www.figma.com/design/hI5xVxAdqeYuA0gS1xTrT8/Convertix?node-id=0-1&t=9qHcht5Y4tSGJuGq-1)
+![Figma del proyecto](https://www.figma.com/design/hI5xVxAdqeYuA0gS1xTrT8/Convertix?node-id=0-1&t=fHzxOyDQZ137G8LF-1)
 
 ## Como ejecutar el proyecto
 ** Aun no se construye para saber **
