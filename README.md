@@ -56,10 +56,14 @@ Este diagrama ilustra el flujo temporal del procesamiento de una solicitud, desd
 
 ![](Diagramas/DiagramaFlujo.svg)
 
+### 3. Diagrama de casos de uso 
+
+![](Diagramas/DiagramaFlujo.svg)
+
 ### 3. Diagrama de Despliegue (Deployment)
 El siguiente diagrama muestra cómo se despliegan los componentes en nodos físicos (o Docker Hosts). Se utiliza un nodo para la capa de presentación y mensajería, y otro para el procesamiento intensivo y almacenamiento:
 
-![](Diagramas/Despliegue.svg)
+![](Diagramas/CasosDeUso.svg)
 
 ## Interfaces de usuario
 ![Vista previa del diseño en Figma](img/Convertix.png) 
