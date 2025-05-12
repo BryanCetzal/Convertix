@@ -1,0 +1,349 @@
+/* ============================================= */
+/* ESTILOS BASE Y CONFIGURACIONES GLOBALES */
+/* ============================================= */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Transiciones para el estado inicial (preload) */
+body.is-preload #bg,
+body.is-preload header,
+body.is-preload main {
+    opacity: 0;
+}
+
+/* ============================================= */
+/* HEADER - BARRA SUPERIOR */
+/* ============================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.426);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.logopt2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6e97ff;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav a:hover {
+    color: #6e97ff;
+}
+
+/* ============================================= */
+/* HERO - SECCIÓN PRINCIPAL */
+/* ============================================= */
+main {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 0 20px;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.3s;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: medium;
+}
+
+.hero2 {
+    color: #6e97ff;
+}
+
+/* ============================================= */
+/* ZONA DE CARGA DE ARCHIVOS */
+/* ============================================= */
+.upload-area {
+    position: relative;
+    border: 2px dashed #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.426);
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.upload-area:hover {
+    border-color: #0000006f;
+}
+
+.upload-instructions {
+    font-size: 24px;
+    font-weight: medium;
+    color: #ffffff;
+}
+
+.uploadpt2 {
+    font-size: 24px;
+    font-weight: medium;
+    color: #6e97ff;
+}
+
+.formats {
+    font-weight: light;
+    margin-top: 10px !important;
+    color: #777777;
+    font-size: 0.9rem !important;
+}
+
+#fileInput {
+    display: none;
+}
+
+/* ============================================= */
+/* LISTA DE ARCHIVOS CARGADOS */
+/* ============================================= */
+.file-list {
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    display: none;
+    margin-top: 20px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.file-progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #6e97ff;
+    transition: width 0.5s ease-out, opacity 0.5s ease-out;
+    z-index: 0;
+    opacity: 1;
+}
+
+.file-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.file-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url('../assets/img/imageicon.png') no-repeat center center;
+    background-size: contain;
+}
+
+.file-name {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff;
+}
+
+.file-remove {
+    color: #ff6b6b;
+    cursor: pointer;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 0 15px;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.file-remove:hover {
+    transform: scale(1.5);
+}
+
+/* ============================================= */
+/* CONTROLES DE CONVERSIÓN */
+/* ============================================= */
+.conversion-controls {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.format-options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.format-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.format-btn {
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #6e97ff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.format-btn.active {
+    background: #6e97ff;
+}
+
+.format-btn:not(.active):hover {
+    background: rgba(110, 151, 255, 0.3);
+}
+
+/* ============================================= */
+/* CONTROL DE CALIDAD */
+/* ============================================= */
+.quality-control {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.quality-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#qualitySlider {
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    border-radius: 3px;
+    width: 120px;
+}
+
+#qualitySlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #6e97ff;
+    cursor: pointer;
+}
+
+#qualityValue {
+    color: #6e97ff;
+    font-weight: bold;
+    min-width: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* ============================================= */
+/* BOTONES PRINCIPALES */
+/* ============================================= */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#convertBtn {
+    background: #6e97ff;
+    color: white;
+}
+
+#convertBtn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+#cancelBtn {
+    background: #ff6b6b;
+    color: white;
+}
+
+#cancelBtn:disabled {
+    background: #cccccc !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* ============================================= */
+/* BARRA DE PROGRESO DE CONVERSIÓN */
+/* ============================================= */
+.conversion-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgba(110, 151, 255, 0.3);
+    transition: height 0.3s ease, opacity 0.5s ease;
+    z-index: 0;
+}
+
+/* ============================================= */
+/* FONDO DE PANTALLA */
+/* ============================================= */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('../assets/img/bg.jpg') no-repeat center center;
+    background-size: cover;
+    transition: opacity 2s ease-in-out;
+}

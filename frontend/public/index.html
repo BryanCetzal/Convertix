@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CONVERTIX - Conversor de Imágenes a WebP</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    </head>
+<body class="is-preload">
+    <div id="bg"></div>
+    <header>
+        <div class="logo">
+            CONVER<span class="logopt2">TIX</span>
+        </div>
+        <nav>
+            <a href="#">Contacto</a>
+            <a href="#">Iniciar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1 class="hero2">Conversor y Optimizador de Imágenes</h1>
+            <p>Optimiza y convierte tus imágenes a WebP</p>
+        </div>
+        <div class="upload-area" id="dropZone">
+            <div class="upload-instructions" id="instructions">
+                Arrastra y suelta tus imágenes aquí o <span class="uploadpt2">selecciona archivos</span>
+                <p class="formats">PNG, JPG: Máximo 20MB por archivo</p>
+            </div>
+            <div class="file-list" id="fileList">
+                <!-- Aquí aparecerán las imágenes cargadas -->
+            </div>
+
+
+            <!--
+                ELEMENTOS ESENCIALES PARA EL BACKEND:
+                1. Input de archivos (contiene las imágenes seleccionadas):
+                - Array de File objects
+                - Se obtiene con: files (variable global en script.js)
+            -->
+            <input type="file" id="fileInput" accept=".png, .jpg, .jpeg" multiple>
+
+
+        </div>
+
+        <div class="conversion-controls">
+            <div class="format-options">
+                <label>Convertir a:</label>
+
+
+                <!-- 
+                    2. Selector de formato (valor activo):
+                    - data-format del botón activo (webp/png/jpg)
+                    - Se obtiene con: document.querySelector('.format-btn.active').dataset.format
+                -->
+                <div class="format-buttons">
+                    <button class="format-btn active" data-format="webp">WEBP</button>
+                    <button class="format-btn" data-format="png">PNG</button>
+                    <button class="format-btn" data-format="jpg">JPG</button>
+                </div>
+
+
+                <div class="quality-control" style="opacity: 1; pointer-events: auto;">
+                    <div class="quality-wrapper">
+                        <div class="slider-container">
+                            <span class="option-label">Calidad:</span>
+
+
+                            <!--
+                                3. Control de calidad (solo aplica para WEBP):
+                                - Valor del slider (10-100)
+                                - Se obtiene con: document.getElementById('qualitySlider').value
+                            -->
+                            <input type="range" id="qualitySlider" min="10" max="100" step="10" value="10">
+
+
+                            <span id="qualityValue">10%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="convertBtn" disabled>Convertir</button>
+                <button id="cancelBtn" style="display: none;">Cancelar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
