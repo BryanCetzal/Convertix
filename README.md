@@ -61,7 +61,7 @@ El siguiente diagrama muestra cómo se despliegan los componentes.
 
 ## Interfaces de usuario
 ![Vista previa del diseño en Figma](img/Convertix.png) 
-![Vista previa del diseño en Figma](img/Convertix.png) 
+![Vista previa del diseño en Figma](img/UIAdmin.png) 
 
 [Figma del proyecto - Ver diseño en Figma](https://www.figma.com/design/hI5xVxAdqeYuA0gS1xTrT8/Convertix?node-id=0-1&t=fHzxOyDQZ137G8LF-1)
 
