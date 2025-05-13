@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  backend:
+    build: .
+    container_name: fastapi_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/code/app
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"     # Celery
+      - "15672:15672"   # RabbitMQ admin
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  worker:
+    build: .
+    container_name: celery_worker
+    command: celery -A app.core.celery_app worker --loglevel=info -P solo
+    volumes:
+      - ./app:/code/app
+    depends_on:
+      - backend
+      - rabbitmq

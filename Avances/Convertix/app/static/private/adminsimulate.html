@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERTIX - Panel de Administración</title>
+    <link rel="stylesheet" href="../public/styles.css">
+    <link rel="stylesheet" href="adminsimulate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div id="admin-bg"></div>
+    
+    <header class="admin-header">
+        <div class="logo">
+            CONVER<span class="logopt2">TIX</span> <span class="admin-badge">Admin</span>
+        </div>
+        <nav>
+            <a href="#" id="dashboardLink">Dashboard</a>
+            <a href="#" id="usersLink">Usuarios</a>
+            <a href="#" id="statsLink">Estadísticas</a>
+            <a href="#" id="logoutLink">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <section class="admin-card-container">
+            <!-- Tarjeta de Resumen Diario -->
+            <div class="admin-card">
+                <h3 class="subtitle">Conversiones Hoy</h3>
+                <div class="stat-value">1,248</div>
+                <div class="stat-comparison positive">↑ 12% respecto a ayer</div>
+            </div>
+
+            <!-- Tarjeta de Errores -->
+            <div class="admin-card error-card">
+                <h3 class="subtitle">Errores Reportados</h3>
+                <div class="stat-value">23</div>
+                <div class="error-types">
+                    <span>Formato: 12</span>
+                    <span>Tamaño: 8</span>
+                    <span>Otros: 3</span>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Uso de Almacenamiento -->
+            <div class="admin-card storage-card">
+                <h3 class="subtitle">Almacenamiento</h3>
+                <div class="storage-bar">
+                    <div class="storage-progress" style="width: 65%"></div>
+                </div>
+                <div class="storage-info">
+                    <span>4.7GB/7GB usados</span>
+                    <span>65%</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-activity">
+            <h2 class="title">Actividad Reciente</h2>
+            <div class="activity-list-container">
+                <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">📷</div>
+                    <div class="activity-details">
+                        <p><strong>Usuario123</strong> convirtió 5 imágenes a <span class="format-badge webp">WEBP</span></p>
+                        <div class="activity-meta">
+                            <span>Hace 15 minutos</span>
+                            <span>Calidad: 80%</span>
+                            <span>Tamaño: 4.2MB → 1.8MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                <div class="activity-item">
+                    <div class="activity-icon">🖼️</div>
+                    <div class="activity-details">
+                        <p><strong>Usuario456</strong> convirtió 3 imágenes a <span class="format-badge png">PNG</span></p>
+                        <div class="activity-meta">
+                            <span>Hace 32 minutos</span>
+                            <span>Calidad: 90%</span>
+                            <span>Tamaño: 6.1MB → 4.3MB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">📸</div>
+                    <div class="activity-details">
+                        <p><strong>Usuario789</strong> convirtió 8 imágenes a <span class="format-badge jpg">JPG</span></p>
+                        <div class="activity-meta">
+                            <span>Hace 1 hora</span>
+                            <span>Calidad: 75%</span>
+                            <span>Tamaño: 12.4MB → 8.2MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="conversion-charts">
+            <div class="chart-container">
+                <h3 class="subtitle">Conversiones por Hora</h3>
+                <div class="bar-chart-wrapper">
+                   <div class="bar-chart">
+                        <div class="chart-legend">
+                            <span>12am</span>
+                            <span>6am</span>
+                            <span>12pm</span>
+                            <span>6pm</span>
+                        </div>
+                        <div class="chart-bars">
+                            <!-- Barras se generarán con JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3 class="subtitle">Formatos Más Usados</h3>
+                <div class="pie-chart-container">
+                    <div class="pie-chart"></div>
+                    <div class="pie-chart-legend">
+                        <div><span class="webp-dot"></span> WebP (65%)</div>
+                        <div><span class="png-dot"></span> PNG (20%)</div>
+                        <div><span class="jpg-dot"></span> JPG (15%)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="adminsimulate.js"></script>
+</body>
+</html>
+--!>

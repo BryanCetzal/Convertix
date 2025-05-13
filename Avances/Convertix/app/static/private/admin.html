@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERTIX - Panel de Administración</title>
+    <!-- 
+        IMPORTANTE PARA BACKEND:
+        - Todas las rutas deben ser relativas al sistema de archivos final
+        - En producción, considerar usar URL absolutas o variables de entorno
+    -->
+    <link rel="stylesheet" href="../public/styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <!-- 
+        ESTRUCTURA PRINCIPAL:
+        - El backend debe proveer datos para llenar estas secciones
+        - Todas las interacciones pasarán por fetch/API calls
+    -->
+    <div id="admin-bg"></div>
+    
+    <header class="admin-header">
+        <div class="logo">
+            CONVER<span class="logopt2">TIX</span> <span class="admin-badge">Admin</span>
+        </div>
+        <nav>
+            <!-- 
+                NAVEGACIÓN:
+                - Cada enlace debe manejar vistas diferentes
+                - Considerar implementar SPA o carga por fragmentos
+            -->
+            <a href="#" id="dashboardLink">Dashboard</a>
+            <a href="#" id="usersLink">Usuarios</a>
+            <a href="#" id="statsLink">Estadísticas</a>
+            <a href="#" id="logoutLink">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <!-- 
+            SECCIÓN DE TARJETAS RESUMEN:
+            - Los valores numéricos vendrán del backend
+            - IDs/clases deben mantenerse para el JS
+        -->
+        <section class="admin-card-container">
+            <div class="admin-card" id="conversionsCard">
+                <!-- Contenido dinámico desde JS -->
+            </div>
+
+            <div class="admin-card error-card" id="errorsCard">
+                <!-- Contenido dinámico desde JS -->
+            </div>
+
+            <div class="admin-card storage-card" id="storageCard">
+                <!-- Contenido dinámico desde JS -->
+            </div>
+        </section>
+
+        <!-- 
+            ACTIVIDAD RECIENTE:
+            - Listado generado desde JS basado en datos del backend
+            - Mantener estructura HTML para estilos
+        -->
+        <section class="recent-activity" id="recentActivity">
+            <h2 class="title">Actividad Reciente</h2>
+            <div class="activity-list-container">
+                <div class="activity-list" id="activityList">
+                    <!-- Items generados dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            GRÁFICOS:
+            - Canvas para gráficos generados dinámicamente
+            - Leyendas actualizadas desde JS
+        -->
+        <section class="conversion-charts">
+            <div class="chart-container" id="hourlyChart">
+                <!-- Gráfico generado dinámicamente -->
+            </div>
+            <div class="chart-container" id="formatsChart">
+                <!-- Gráfico generado dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+        IMPORTANTE PARA BACKEND:
+        - Este script debe cargarse después del DOM
+        - Todas las interacciones con backend pasan por aquí
+    -->
+    <script src="admin.js"></script>
+</body>
+</html>
