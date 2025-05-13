@@ -6,9 +6,10 @@ Tener inicializado lo siguiente:
             -> rabbitmq-plugins enable rabbitmq_management
             -> rabbitmq-service.bat stop
             -> rabbitmq-service.bat start
+   
    Ir a: http://localhost:15672/
    Tuve que hacer todo lo anterior para que me permita entrar al sitio.
    User: guest
    Pass: guest
    
-4. Celery -> C:\Convertix\Convertix> celery -A app.core.celery_app worker --loglevel=info -P solo
+5. Celery -> C:\Convertix\Convertix> celery -A app.core.celery_app worker --loglevel=info -P solo
