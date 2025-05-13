@@ -45,22 +45,17 @@ Este proyecto se clasifica como un sistema distribuido debido a que:
 
 ## Diagramas del Sistema
 
-### 1. Diagrama de Arquitectura General
+### Diagrama de casos de uso 
 
-Este diagrama muestra la interacción entre el cliente, FastAPI, RabbitMQ, el Auto Scaling Manager, los workers, el almacenamiento y la monitorización:
+![](Diagramas/CasosUso.svg)
 
-![](Diagramas/DiagramaGeneral.svg)
 
-### 2. Diagrama de Secuencia del Proceso 
+### Diagrama de Secuencia del Proceso 
 Este diagrama ilustra el flujo temporal del procesamiento de una solicitud, desde la autenticación en FastAPI hasta la notificación al cliente, incluyendo la gestión de errores:
 
 ![](Diagramas/DiagramaFlujo.svg)
 
-### 3. Diagrama de casos de uso 
-
-![](Diagramas/CasosDeUso.svg)
-
-### 3. Diagrama de Despliegue (Deployment)
+### Diagrama de Despliegue (Deployment)
 El siguiente diagrama muestra cómo se despliegan los componentes en nodos físicos (o Docker Hosts). Se utiliza un nodo para la capa de presentación y mensajería, y otro para el procesamiento intensivo y almacenamiento:
 
 ![](Diagramas/deployment.png)
@@ -74,3 +69,8 @@ El siguiente diagrama muestra cómo se despliegan los componentes en nodos físi
 ** Aun no se construye para saber **
 
 ## Colaboradores
+<div align="center">
+<a href="https://github.com/BryanCetzal"><img src="https://avatars.githubusercontent.com/u/91039569?v=4" title="bryan-cetzal" width="50" height="50" ></a>
+<a href="https://github.com/Benn7n"><img src="https://avatars.githubusercontent.com/u/92053696?v=4" title="Benneeeeeeen" width="50" height="50" ></a>
+<a href="https://github.com/abrahamcruzc"><img src="https://avatars.githubusercontent.com/u/89595482?v=4" title="luis-lagunez" width="50" height="50" ></a>
+</div>
