@@ -24,7 +24,7 @@ El sistema se compone de los siguientes servicios:
 - **Monitorización & Logging:**  
   Componente encargado de recopilar métricas, logs y eventos de todos los servicios, lo que permite hacer trazabilidad y análisis en tiempo real.
 
-### ¿Por qué es un Sistema Distribuido?
+### Caracteristicas del sistema
 
 Este proyecto se clasifica como un sistema distribuido debido a que:
 
@@ -46,7 +46,7 @@ Este proyecto se clasifica como un sistema distribuido debido a que:
 ## Diagramas del Sistema
 
 ### Diagrama de casos de uso 
-
+Este diagrama muestra los casos de uso de la aplicación Convertix.
 ![](Diagramas/CasosUso.svg)
 
 
@@ -56,21 +56,26 @@ Este diagrama ilustra el flujo temporal del procesamiento de una solicitud, desd
 ![](Diagramas/DiagramaFlujo.svg)
 
 ### Diagrama de Despliegue (Deployment)
-El siguiente diagrama muestra cómo se despliegan los componentes en nodos físicos (o Docker Hosts). Se utiliza un nodo para la capa de presentación y mensajería, y otro para el procesamiento intensivo y almacenamiento:
-
-![](Diagramas/deployment.png)
+El siguiente diagrama muestra cómo se despliegan los componentes.
+![](Diagramas/DiagramaDespligue.png)
 
 ## Interfaces de usuario
+![Vista previa del diseño en Figma](img/Convertix.png) 
 ![Vista previa del diseño en Figma](img/Convertix.png) 
 
 [Figma del proyecto - Ver diseño en Figma](https://www.figma.com/design/hI5xVxAdqeYuA0gS1xTrT8/Convertix?node-id=0-1&t=fHzxOyDQZ137G8LF-1)
 
 ## Como ejecutar el proyecto
-** Aun no se construye para saber **
+Para ejecutar el proyecto se requieren los siguientes pasos
+1. Crear la base de datos Convertix de PostgreSQL
+2. Levanta el docker de Rabbitmq y dejar los puertos expuestos
+3. Activar Celery
+4. Ejecutar el servidor de FastApi
+5. Acceder a Index.hmtl
 
 ## Colaboradores
 <div align="center">
 <a href="https://github.com/BryanCetzal"><img src="https://avatars.githubusercontent.com/u/91039569?v=4" title="bryan-cetzal" width="50" height="50" ></a>
 <a href="https://github.com/Benn7n"><img src="https://avatars.githubusercontent.com/u/92053696?v=4" title="Benneeeeeeen" width="50" height="50" ></a>
-<a href="https://github.com/abrahamcruzc"><img src="https://avatars.githubusercontent.com/u/89595482?v=4" title="luis-lagunez" width="50" height="50" ></a>
+<a href="https://github.com/abrahamcruzc"><img src="https://avatars.githubusercontent.com/u/89595482?v=4" title="abraham-cruz" width="50" height="50" ></a>
 </div>
